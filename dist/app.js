@@ -1,15 +1,14 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const renderHTML_1 = __importDefault(require("./renderHTML"));
+const formOutput = document.getElementById("ulOutput");
+if ((formOutput === null || formOutput === void 0 ? void 0 : formOutput.getElementsByTagName("li").length) == 0) {
+    console.log("empty");
+}
 const formInput = document.getElementById("formTransaction");
-formInput?.addEventListener('submit', (event) => {
+formInput === null || formInput === void 0 ? void 0 : formInput.addEventListener('submit', (event) => {
     event.preventDefault();
     let inputType = document.getElementById("cashToggle").value;
     let inputName = document.getElementById("name").value;
     let inputDetails = document.getElementById("details").value;
     let inputAmount = document.getElementById("amount").value;
-    (0, renderHTML_1.default)(inputType, inputName, inputDetails, inputAmount);
+    console.log(`${inputType}, ${inputName}, ${inputDetails}, ${inputAmount}`);
 });
