@@ -1,3 +1,5 @@
+import renderHTML from "./renderHTML";
+
 const formInput = document.getElementById("formTransaction");
 
 formInput?.addEventListener('submit', (event) => {
@@ -7,10 +9,6 @@ formInput?.addEventListener('submit', (event) => {
     let inputDetails: string = (document.getElementById("details") as HTMLInputElement).value
     let inputAmount: string = (document.getElementById("amount") as HTMLInputElement).value
 
-    if (inputType == "0"){
-        console.log("Cash In");
-    } else {
-        console.log("Cash Out");
-    }
-    console.log(`${inputName}, ${inputDetails}, ${inputAmount}`)
+    renderHTML(inputType, inputName, inputDetails, inputAmount);
 });
+

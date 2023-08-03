@@ -11,39 +11,44 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAddTransaction">
-                    Add Transaction
-                </button>
-              </li>
-          </div>
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#modalAddTransaction">
+                            Add Transaction
+                        </button>
+                    </li>
+            </div>
         </div>
-      </nav>
+    </nav>
     <header>
         <h1>Financial Tracker</h1>
     </header>
     <section id="inputFormModal">
-        <div class="modal fade" id="modalAddTransaction" tabindex="-1" aria-labelledby="modalAddTransactionLabels" aria-hidden="true">
+        <div class="modal fade" id="modalAddTransaction" tabindex="-1" aria-labelledby="modalAddTransactionLabels"
+            aria-hidden="true">
             <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="modalAddTransactionLabel">Add Transaction</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalAddTransactionLabel">Add Transaction</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
                         <div class="container">
                             <form class="form-inline" action="#" id="formTransaction">
                                 <div class="mb-3">
                                     <label for="" class="form-label">City</label>
-                                    <select class="form-select form-select-lg" name="cashToggle" id="cashToggle" required>
-                                        <option value="0">Cash In</option>
-                                        <option value="1">Cash Out</option>
+                                    <select class="form-select form-select-lg" name="cashToggle" id="cashToggle"
+                                        required>
+                                        <option value="Cash In">Cash In</option>
+                                        <option value="Cash Out">Cash Out</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
@@ -75,22 +80,12 @@
             </div>
         </div>
     </section>
-    <section id="lineChart">
-        <div class="row my-2">
-            <div class="col-md-6 py-1">
-                <div class="card">
-                    <div class="card-body">
-                        <canvas id="chLine"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="outputHtml">
+        <div id="myPlot" style="width:100%;max-width:700px"></div>
     </section>
 </body>
 
 <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-<script>var exports = {};</script>
-<script src="dist/main.js"></script>
+<script src="dist/app.js"></script>
 
 </html>
