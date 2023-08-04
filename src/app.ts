@@ -1,9 +1,9 @@
-import renderHTML from "./renderHTML";
-import fetchHTML from "./fetchHTML";
+import renderHTML from "./renderHTML.js";
+import fetchHTML from "./fetchHTML.js";
 
 fetchHTML();
 
-const formInput = document.getElementById("formTransaction");
+const formInput = document.getElementById("formTransaction") as HTMLFormElement;
 
 formInput?.addEventListener('submit', (event) => {
     event.preventDefault();
