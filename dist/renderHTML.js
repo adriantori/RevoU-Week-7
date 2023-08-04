@@ -1,6 +1,5 @@
-import fetchHTML from "./fetchHTML.js";
+import saveHTML from "./saveHTML.js";
 export default function renderHTML(types, names, details, amounts, counterId) {
-    fetchHTML();
     const outputElement = document.getElementById("ulOutput");
     outputElement.innerHTML += `
     <li class="border border-primary mt-3 p-3" id="output-${counterId}">
@@ -9,4 +8,6 @@ export default function renderHTML(types, names, details, amounts, counterId) {
     <button type="button" class="btn btn-danger" onclick="deleteElement('output-${counterId}')">DELETE</button>
     </li>
     `;
+    let inputs = [`output-${counterId}`, types, names, details, amounts];
+    saveHTML(inputs);
 }

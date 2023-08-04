@@ -1,7 +1,6 @@
-import fetchHTML from "./fetchHTML.js";
+import saveHTML from "./saveHTML.js";
 
-export default function renderHTML(types: string, names: string, details: string, amounts: string, counterId: number){
-    fetchHTML();
+export default function renderHTML(types: string, names: string, details: string, amounts: string, counterId: number ){
     const outputElement = document.getElementById("ulOutput") as HTMLElement;
     outputElement.innerHTML += `
     <li class="border border-primary mt-3 p-3" id="output-${counterId}">
@@ -10,4 +9,6 @@ export default function renderHTML(types: string, names: string, details: string
     <button type="button" class="btn btn-danger" onclick="deleteElement('output-${counterId}')">DELETE</button>
     </li>
     `;
+    let inputs = [`output-${counterId}`,types, names, details, amounts];
+    saveHTML(inputs);
 }
