@@ -20,5 +20,4 @@ formInput?.addEventListener('submit', (event) => {
     easter(inputName, inputDetails, counterId);
     renderHTML(inputType, inputName, inputDetails, inputAmount, counterId!);
 
-    
 });
