@@ -5,6 +5,5 @@ function deleteElement(outputId) {
     if (parentElement) {
         parentElement.removeChild(elementRemove);
     }
-    console.log(outputId);
     localStorage.removeItem(outputId);
 }
