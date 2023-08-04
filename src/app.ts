@@ -12,8 +12,7 @@ formInput?.addEventListener('submit', (event) => {
     let inputName: string = (document.getElementById("name") as HTMLInputElement).value
     let inputDetails: string = (document.getElementById("details") as HTMLInputElement).value
     let inputAmount: string = (document.getElementById("amount") as HTMLInputElement).value
-
-    //console.log(`${inputType}, ${inputName}, ${inputDetails}, ${inputAmount}`);
+    
     renderHTML(inputType, inputName, inputDetails, inputAmount, counterId);
     counterId++;
 });

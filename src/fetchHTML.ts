@@ -1,6 +1,5 @@
 export default function fetchHTML(){
     const formOutput = document.getElementById("ulOutput") as HTMLElement
-    console.log(formOutput.getElementsByTagName("li").length)
     //load data from localStorage
     if (formOutput?.getElementsByTagName("li").length == 0){
         formOutput.innerHTML = `
@@ -11,6 +10,5 @@ export default function fetchHTML(){
         `;
     }else{
         return formOutput.innerHTML;
-        console.log("out");
     }
 }

@@ -1,5 +1,3 @@
-console.log("deleteHTML loaded");
-
 function deleteElement(outputId :string){
     const elementRemove = document.getElementById(`${outputId}`);
     const parentElement = elementRemove?.parentNode;
