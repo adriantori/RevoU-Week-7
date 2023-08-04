@@ -1,8 +1,8 @@
 import renderHTML from "./renderHTML.js";
 import fetchHTML from "./fetchHTML.js";
+import easter from "./easterEgg.js";
 const formInput = document.getElementById("formTransaction");
 let counterId = parseInt(fetchHTML());
-console.log(counterId);
 formInput === null || formInput === void 0 ? void 0 : formInput.addEventListener('submit', (event) => {
     event.preventDefault();
     if (Number.isNaN(counterId)) {
@@ -15,6 +15,6 @@ formInput === null || formInput === void 0 ? void 0 : formInput.addEventListener
     let inputName = document.getElementById("name").value;
     let inputDetails = document.getElementById("details").value;
     let inputAmount = document.getElementById("amount").value;
-    console.log(counterId);
+    easter(inputName, inputDetails, counterId);
     renderHTML(inputType, inputName, inputDetails, inputAmount, counterId);
 });
